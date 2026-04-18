@@ -669,8 +669,8 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
 <script>
 // ===== CONFIG =====
 // ✏️ ضع بيانات Supabase هنا مباشرة بعد ما تحصل عليها
-const HARDCODED_URL = ''; // مثال: https://xxxx.supabase.co
-const HARDCODED_KEY = ''; // مثال: eyJhbGci...
+const HARDCODED_URL = 'https://wnrwvlmhtbohzaffnhay.supabase.co'; // مثال: https://xxxx.supabase.co
+const HARDCODED_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inducnd2bG1odGJvaHphZmZuaGF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MDIyOTUsImV4cCI6MjA5MjA3ODI5NX0.4zRQVvaLTqmhzu1TIepkZWcePjExdhm2IT599hGeN0E'; // مثال: eyJhbGci...
 
 let SB_URL = HARDCODED_URL || localStorage.getItem('yfc_sb_url') || '';
 let SB_KEY = HARDCODED_KEY || localStorage.getItem('yfc_sb_key') || '';
