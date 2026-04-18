@@ -691,14 +691,17 @@ function loadLogo() {
 }
 
 // ===== GOOGLE SHEETS API =====
+// استخدام GET + query params لتجنب CORS مع Apps Script
 async function gsApi(params) {
   if (!GS_URL) throw new Error('لم يتم إعداد Google Sheets بعد');
-  const res = await fetch(GS_URL, {
-    method: 'POST',
-    body: JSON.stringify(params),
-    headers: { 'Content-Type': 'text/plain' }
-  });
-  const data = await res.json();
+  const qs = Object.entries(params).map(([k,v]) => {
+    const val = (typeof v === 'object') ? JSON.stringify(v) : String(v);
+    return encodeURIComponent(k) + '=' + encodeURIComponent(val);
+  }).join('&');
+  const res = await fetch(GS_URL + '?' + qs, { method: 'GET', redirect: 'follow' });
+  const text = await res.text();
+  let data;
+  try { data = JSON.parse(text); } catch(e) { throw new Error('رد غير صالح من السيرفر'); }
   if (!data.ok) throw new Error(data.error || 'خطأ غير معروف');
   return data;
 }
@@ -776,7 +779,7 @@ async function doLogin() {
   btn.innerHTML='<div class="spinner" style="width:16px;height:16px;border-width:2px"></div>';
   btn.disabled=true;
   try {
-    const data = await gsApi({ action: 'auth', username, password: pass });
+    const data = await gsApi({ action: 'auth', tab: 'users', username, password: pass });
     btn.innerHTML='دخول'; btn.disabled=false;
     currentUser = data.user;
     closeLogin();
