@@ -385,16 +385,27 @@ select option { background: var(--bg3); }
 
 /* Responsive */
 @media (max-width: 640px) {
-  .pub-nav-btn { padding: 6px 10px; font-size: 12px; }
-  .logo-text .t1 { font-size: 12px; }
+  .pub-nav-btn { padding: 6px 8px; font-size: 11px; }
+  .logo-text .t1 { font-size: 11px; }
+  .logo-text .t2 { display: none; }
   .match-team { font-size: 12px; }
   .score-num { font-size: 18px; }
-  .admin-tab { padding: 7px 10px; font-size: 12px; }
-  th, td { padding: 9px 8px; }
+  .admin-tab { padding: 7px 9px; font-size: 11px; }
+  th, td { padding: 8px 7px; font-size: 12px; }
+  .main { padding: 1rem 0.6rem 4rem; }
+  .hero { padding: 1.5rem 0.8rem 1.2rem; }
+  .form-card { padding: 1rem; }
+  .admin-content { padding: 1rem 0.6rem; }
+  .score-display { padding: 6px 10px; gap: 6px; }
+  .upcoming-card { flex-wrap: wrap; gap: 8px; padding: 12px; }
+  .stat-card { padding: 10px 8px; }
+  .stat-card .val { font-size: 22px; }
 }
 @media (max-width: 400px) {
-  .header-inner { gap: 6px; }
+  .header-inner { gap: 4px; }
   .admin-btn span { display: none; }
+  .pub-nav-btn { padding: 5px 7px; font-size: 10px; }
+  .logo-icon { width: 34px; height: 34px; }
 }
 </style>
 </head>
@@ -682,7 +693,7 @@ let matchesCache = [];
 let allMatches = [];
 
 // ===== LOGO =====
-const logoUrl = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADhAOEDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAcIBAUGAQID/8QAVBAAAQMDAQQEBg0HCAgHAAAAAQACAwQFBhEHEiExCBNBURciYXGBkRQVMjZCUlVWdZOUs9EjM2JyhKHDNFSCkqOxwdMWJDVDU6Ky0jdEY5W0wvD/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUDBgcCAf/EAD0RAAEDAgIGBggDCAMAAAAAAAEAAgMEEQUhEjFBUXGRBhMUUmGBIjM1obHB0fAyNOEVI0JissLi8VNykv/aAAwDAQACEQMRAD8AuWiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/Koqaen06+oii15b7w3X1r8fbO2/KFJ9c38V9sV8LgNqy0WJ7Z235QpPrm/intnbflCk+ub+KWK+aTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/ivplwoJHBrK6mc48gJWk/3pYppDeslERfF6REREREREREREREREREX419VT0NDPW1crYaenhfLLI7kxjRqSfMAi+EgC5WmzrLrNhtldc7xOWtJ3YYWDWSZ3xWj/ABPAdpVZ852xZfkkskVJVvstAT4sFG8te...";
+const logoUrl = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='16' fill='%230d6478'/%3E%3Ccircle cx='40' cy='40' r='22' fill='none' stroke='%2314b8d4' stroke-width='3'/%3E%3Cellipse cx='40' cy='40' rx='22' ry='9' fill='none' stroke='%2314b8d4' stroke-width='2'/%3E%3Cline x1='18' y1='40' x2='62' y2='40' stroke='%2314b8d4' stroke-width='2'/%3E%3Ccircle cx='40' cy='40' r='4' fill='%23F5A623'/%3E%3Ctext x='40' y='68' text-anchor='middle' font-family='Oswald,sans-serif' font-size='11' font-weight='700' fill='%23F5A623' letter-spacing='1'%3EYFC%3C/text%3E%3C/svg%3E"
 
 function loadLogo() {
   document.querySelectorAll('#headerLogoImg,#heroLogoImg,#loginLogoImg,#adminLogoImg').forEach(el => {
@@ -713,6 +724,7 @@ function genId() {
 // ===== INIT =====
 function start() {
   loadLogo();
+  GS_URL = localStorage.getItem('yfc_gs_url') || '';
   if (!GS_URL) { showConfigScreen(); return; }
   loadPublicData();
 }
@@ -839,7 +851,7 @@ async function loadStandings() {
     teamsCache = teamsRes.data || [];
     allMatches = matchesRes.data || [];
 
-    const played = allMatches.filter(m=>String(m.played)==='true'||m.played===true);
+    const played = allMatches.filter(m=>String(m.played).toLowerCase()==='true'||m.played===true);
     const stats = {};
     teamsCache.forEach(t=>stats[t.name]={name:t.name,abbr:t.abbr||t.name.substring(0,3),p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
     let totalGoals=0, maxRound=0;
@@ -888,7 +900,10 @@ async function loadStandings() {
 }
 
 async function loadUpcoming() {
-  const upcoming = allMatches.filter(m=>String(m.played)!=='true'&&m.played!==true).sort((a,b)=>{
+  const upcoming = allMatches.filter(m=>{
+    const p = String(m.played).toLowerCase();
+    return p !== 'true' && p !== '1';
+  }).sort((a,b)=>{
     if(!a.match_date) return 1; if(!b.match_date) return -1;
     return new Date(a.match_date)-new Date(b.match_date);
   }).slice(0,6);
@@ -900,7 +915,7 @@ async function loadUpcoming() {
     <div class="upcoming-card">
       <div class="upcoming-info" style="min-width:80px">
         <div class="upcoming-date">${m.match_date?formatDate(m.match_date):''}</div>
-        <div class="upcoming-time">${m.match_time?String(m.match_time).substring(0,5):''}</div>
+        <div class="upcoming-time">${m.match_time?formatTime(m.match_time):''}</div>
         <div style="font-size:11px;color:var(--text3)">جولة ${m.round||'—'}</div>
       </div>
       <div class="upcoming-teams">
@@ -915,7 +930,7 @@ async function loadUpcoming() {
 async function loadPublicResults() {
   const el = document.getElementById('resultsList');
   const tabsEl = document.getElementById('roundTabs');
-  const played = allMatches.filter(m=>String(m.played)==='true'||m.played===true).sort((a,b)=>parseInt(b.round)-parseInt(a.round)||(b.match_date||'').localeCompare(a.match_date||''));
+  const played = allMatches.filter(m=>String(m.played).toLowerCase()==='true'||m.played===true).sort((a,b)=>parseInt(b.round)-parseInt(a.round)||(b.match_date||'').localeCompare(a.match_date||''));
   if(!played.length){ el.innerHTML='<div class="empty-state"><div class="icon">📋</div><p>لا توجد نتائج بعد</p></div>'; tabsEl.innerHTML=''; return; }
 
   const rounds=[...new Set(played.map(m=>parseInt(m.round)).filter(Boolean))].sort((a,b)=>b-a);
@@ -935,7 +950,7 @@ function renderMatchCard(m) {
     <div class="match-meta">
       <span class="round-badge">${m.round?'الجولة '+m.round:'—'}</span>
       ${m.match_date?`<span>📅 ${formatDate(m.match_date)}</span>`:''}
-      ${m.match_time?`<span class="match-time-badge">🕐 ${String(m.match_time).substring(0,5)}</span>`:''}
+      ${m.match_time?`<span class="match-time-badge">🕐 ${formatTime(m.match_time)}</span>`:''}
     </div>
     <div class="match-row">
       <div class="match-team home">${m.team1}</div>
@@ -995,6 +1010,9 @@ async function addTeam() {
   const name=document.getElementById('teamName').value.trim();
   const abbr=document.getElementById('teamAbbr').value.trim().toUpperCase();
   if(!name){ toast('يرجى إدخال اسم الفريق','error'); return; }
+  // Check duplicate
+  const dup = teamsCache.find(t=>t.name.toLowerCase()===name.toLowerCase());
+  if(dup){ toast('الفريق "'+name+'" موجود بالفعل!','error'); return; }
   try {
     await gsApi({ action:'insert', tab:'teams', row:{ id:genId(), name, abbr } });
     toast('تم إضافة الفريق ✓','success');
@@ -1030,8 +1048,8 @@ async function loadAdminMatches() {
       <tbody>${matchesCache.map(m=>`<tr>
         <td>${m.team1}</td><td>${m.team2}</td><td>${m.round||'—'}</td>
         <td>${m.match_date?formatDate(m.match_date):'—'}</td>
-        <td>${m.match_time?String(m.match_time).substring(0,5):'—'}</td>
-        <td><span style="color:${(String(m.played)==='true'||m.played===true)?'var(--green)':'var(--gold)'};font-size:12px">${(String(m.played)==='true'||m.played===true)?'✓ انتهت':'⏳ قادمة'}</span></td>
+        <td>${m.match_time?formatTime(m.match_time):'—'}</td>
+        <td><span style="color:${(String(m.played).toLowerCase()==='true'||m.played===true)?'var(--green)':'var(--gold)'};font-size:12px">${(String(m.played).toLowerCase()==='true'||m.played===true)?'✓ انتهت':'⏳ قادمة'}</span></td>
         <td><button class="btn btn-sm btn-danger" onclick="deleteMatch('${m.id}')">حذف</button></td>
       </tr>`).join('')}</tbody>
     </table></div>`;
@@ -1105,9 +1123,14 @@ async function saveResult() {
     const scorersRes = await gsApi({ action:'getAll', tab:'scorers' });
     const scorersList = scorersRes.data||[];
 
-    for(const name of [...sc1,...sc2]) {
-      const teamName = sc1.includes(name)?(matchData?.team1||''):(matchData?.team2||'');
-      const existing = scorersList.find(s=>s.player_name.toLowerCase()===name.toLowerCase());
+    const scorerEntries = [
+      ...sc1.map(n=>({name:n, team: matchData?.team1||''})),
+      ...sc2.map(n=>({name:n, team: matchData?.team2||''}))
+    ];
+    for(const entry of scorerEntries) {
+      const name = entry.name;
+      const teamName = entry.team;
+      const existing = scorersList.find(s=>s.player_name.toLowerCase()===name.toLowerCase()&&s.team_name===teamName);
       if(existing) {
         await gsApi({ action:'update', tab:'scorers', id:existing.id, row:{ goals: parseInt(existing.goals||0)+1 } });
       } else {
@@ -1128,7 +1151,7 @@ async function loadResultsAdmin() {
   const el = document.getElementById('resultsAdminList');
   try {
     const res = await gsApi({ action:'getAll', tab:'matches' });
-    const data = (res.data||[]).filter(m=>String(m.played)==='true'||m.played===true).sort((a,b)=>parseInt(b.round)-parseInt(a.round));
+    const data = (res.data||[]).filter(m=>String(m.played).toLowerCase()==='true'||m.played===true).sort((a,b)=>parseInt(b.round)-parseInt(a.round));
     if(!data.length){ el.innerHTML='<div class="empty-state"><p>لا توجد نتائج مدخلة بعد</p></div>'; return; }
     el.innerHTML=`<div style="overflow-x:auto"><table class="data-table">
       <thead><tr><th>المباراة</th><th>النتيجة</th><th>الهدافون</th><th>الجولة</th></tr></thead>
@@ -1194,11 +1217,34 @@ async function deleteUser(id, username) {
 function formatDate(d) {
   if(!d) return '';
   const str = String(d);
+  // Sheets Date object comes as "Mon Apr 24 2026 00:00:00 GMT..."
+  if(str.includes('GMT') || str.includes('T')) {
+    const dt = new Date(d);
+    if(!isNaN(dt)) {
+      const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+      return dt.getDate() + ' ' + months[dt.getMonth()] + ' ' + dt.getFullYear();
+    }
+  }
   const parts = str.includes('-') ? str.split('-') : null;
   if(!parts||parts.length<3) return str;
   const [y,m,day] = parts;
   const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
-  return `${parseInt(day)} ${months[parseInt(m)-1]} ${y}`;
+  return parseInt(day) + ' ' + months[parseInt(m)-1] + ' ' + y;
+}
+
+function formatTime(t) {
+  if(!t) return '';
+  const s = String(t);
+  // Sheets returns time as decimal: 0.75 = 18:00
+  const n = parseFloat(s);
+  if(!isNaN(n) && n >= 0 && n < 1) {
+    const totalMin = Math.round(n * 24 * 60);
+    const hh = Math.floor(totalMin / 60);
+    const mm = totalMin % 60;
+    return String(hh).padStart(2,'0') + ':' + String(mm).padStart(2,'0');
+  }
+  // already HH:MM string
+  return s.substring(0,5);
 }
 
 function toast(msg, type='success') {
