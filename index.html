@@ -734,7 +734,7 @@ async function saveConfig() {
   btn.disabled = true; btn.textContent = 'جاري الاتصال...';
   GS_URL = url;
   try {
-    await gsApi({ action: 'getAll', tab: 'teams' });
+    await gsApi({ action: 'init', tab: 'teams' });
     localStorage.setItem('yfc_gs_url', url);
     document.getElementById('configOverlay').style.cssText = 'display:none !important';
     btn.disabled=false; btn.textContent='💾 حفظ وتشغيل النظام';
