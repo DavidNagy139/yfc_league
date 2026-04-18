@@ -64,16 +64,12 @@ body::before {
   height: 64px; gap: 12px;
 }
 .logo-area { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.logo-icon {
-  width: 42px; height: 42px; border-radius: 10px;
-  overflow: hidden; flex-shrink: 0;
-}
+.logo-icon { width: 42px; height: 42px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
 .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
 .logo-text { line-height: 1.1; }
 .logo-text .t1 { font-family: 'Oswald', sans-serif; font-size: 15px; font-weight: 700; color: var(--teal2); letter-spacing: 1px; }
 .logo-text .t2 { font-size: 10px; color: var(--text2); font-weight: 300; }
 
-/* PUBLIC NAV */
 .pub-nav { display: flex; gap: 2px; align-items: center; }
 .pub-nav-btn {
   padding: 7px 14px; border-radius: 8px; font-size: 13px; font-family: 'Cairo', sans-serif;
@@ -96,351 +92,133 @@ body::before {
 .page.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
-/* ===== HERO SECTION ===== */
-.hero {
-  text-align: center; padding: 3rem 1rem 2rem;
-  background: linear-gradient(180deg, rgba(27,143,168,0.08) 0%, transparent 100%);
-  border-radius: var(--r); margin-bottom: 1.5rem;
-  border: 1px solid var(--border);
-}
+/* ===== UI ELEMENTS ===== */
+.hero { text-align: center; padding: 3rem 1rem 2rem; background: linear-gradient(180deg, rgba(27,143,168,0.08) 0%, transparent 100%); border-radius: var(--r); margin-bottom: 1.5rem; border: 1px solid var(--border); }
 .hero-logo { width: 80px; height: 80px; border-radius: 18px; margin: 0 auto 1rem; overflow: hidden; box-shadow: 0 0 40px var(--teal-glow); }
 .hero-logo img { width: 100%; height: 100%; object-fit: cover; }
 .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(24px,5vw,40px); font-weight: 700; color: var(--teal2); letter-spacing: 2px; }
 .hero p { color: var(--text2); font-size: 14px; margin-top: 6px; }
 
-/* ===== STAT CHIPS ===== */
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px,1fr)); gap: 10px; margin-bottom: 1.5rem; }
-.stat-card {
-  background: var(--glass); border: 1px solid var(--border);
-  border-radius: var(--r2); padding: 14px 12px; text-align: center;
-  transition: transform 0.2s;
-}
+.stat-card { background: var(--glass); border: 1px solid var(--border); border-radius: var(--r2); padding: 14px 12px; text-align: center; transition: transform 0.2s; }
 .stat-card:hover { transform: translateY(-2px); }
 .stat-card .val { font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--teal2); line-height: 1; }
 .stat-card .lbl { font-size: 12px; color: var(--text2); margin-top: 4px; }
 
-/* ===== SECTION TITLE ===== */
-.sec-title {
-  display: flex; align-items: center; gap: 10px;
-  font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600;
-  color: var(--text); margin-bottom: 1rem;
-}
-.sec-title::before {
-  content: ''; width: 4px; height: 22px;
-  background: linear-gradient(180deg, var(--teal2), var(--teal-dark));
-  border-radius: 2px; flex-shrink: 0;
-}
+.sec-title { display: flex; align-items: center; gap: 10px; font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+.sec-title::before { content: ''; width: 4px; height: 22px; background: linear-gradient(180deg, var(--teal2), var(--teal-dark)); border-radius: 2px; flex-shrink: 0; }
 
-/* ===== TABLE ===== */
 .table-wrap { overflow-x: auto; border-radius: var(--r); border: 1px solid var(--border); }
 table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 500px; }
 thead tr { background: rgba(27,143,168,0.12); }
 th { padding: 11px 12px; font-size: 11px; font-weight: 600; color: var(--teal2); text-align: right; letter-spacing: 0.5px; white-space: nowrap; }
 td { padding: 11px 12px; border-top: 1px solid var(--border2); color: var(--text); vertical-align: middle; }
-tbody tr { transition: background 0.15s; }
 tbody tr:hover { background: var(--glass2); }
-.rank-medal { font-size: 16px; }
+
 .team-cell { display: flex; align-items: center; gap: 8px; }
-.team-avatar {
-  width: 30px; height: 30px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--teal-dark), var(--teal2));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700; color: white; flex-shrink: 0;
-}
-.pts-badge {
-  background: rgba(27,143,168,0.2); color: var(--teal2);
-  border-radius: 6px; padding: 3px 8px; font-weight: 700; font-size: 13px;
-}
+.team-avatar { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-dark), var(--teal2)); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; flex-shrink: 0; }
+.pts-badge { background: rgba(27,143,168,0.2); color: var(--teal2); border-radius: 6px; padding: 3px 8px; font-weight: 700; font-size: 13px; }
 .pos-badge { font-weight: 700; font-size: 14px; }
 .pos-1 { color: var(--gold); }
 .pos-2 { color: #C0C0C0; }
 .pos-3 { color: #CD7F32; }
 
-/* ===== RESULTS ===== */
 .results-grid { display: grid; gap: 10px; }
-.match-card {
-  background: var(--bg2); border: 1px solid var(--border2);
-  border-radius: var(--r); padding: 14px 16px;
-  transition: border-color 0.2s, transform 0.2s;
-}
+.match-card { background: var(--bg2); border: 1px solid var(--border2); border-radius: var(--r); padding: 14px 16px; transition: border-color 0.2s, transform 0.2s; }
 .match-card:hover { border-color: var(--border); transform: translateY(-1px); }
 .match-meta { font-size: 11px; color: var(--text3); margin-bottom: 10px; display: flex; gap: 12px; align-items: center; }
-.round-badge {
-  background: rgba(27,143,168,0.15); color: var(--teal2);
-  border-radius: 5px; padding: 2px 8px; font-size: 11px; font-weight: 600;
-}
+.round-badge { background: rgba(27,143,168,0.15); color: var(--teal2); border-radius: 5px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
 .match-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .match-team { font-size: 14px; font-weight: 600; flex: 1; }
 .match-team.home { text-align: right; }
 .match-team.away { text-align: left; }
-.score-display {
-  background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 10px; padding: 8px 16px;
-  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
-}
+.score-display { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 8px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .score-num { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: var(--text); }
-.score-sep { color: var(--text3); font-size: 12px; }
 .scorers-line { font-size: 11px; color: var(--text2); margin-top: 8px; display: flex; flex-wrap: wrap; gap: 5px; }
-.scorer-chip {
-  background: rgba(27,143,168,0.1); color: var(--teal2);
-  border-radius: 20px; padding: 2px 8px; font-size: 11px;
-}
-.upcoming-badge {
-  background: rgba(245,166,35,0.12); color: var(--gold);
-  border-radius: 5px; padding: 2px 8px; font-size: 11px; font-weight: 600;
-}
-.match-time-badge {
-  font-size: 12px; color: var(--gold2); font-weight: 600;
-}
+.scorer-chip { background: rgba(27,143,168,0.1); color: var(--teal2); border-radius: 20px; padding: 2px 8px; font-size: 11px; }
 
-/* ===== SCORERS ===== */
-.scorer-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--border2); transition: background 0.15s; }
-.scorer-row:first-child { border-top: none; }
+.scorer-row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--border2); }
 .scorer-row:hover { background: var(--glass2); }
 .scorer-rank { font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 700; width: 28px; text-align: center; flex-shrink: 0; }
 .scorer-info { flex: 1; }
 .scorer-name { font-weight: 600; font-size: 14px; }
 .scorer-team { font-size: 12px; color: var(--text2); }
-.scorer-goals {
-  font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700;
-  color: var(--teal2); display: flex; align-items: center; gap: 4px;
-}
-.scorer-goals span { font-size: 14px; }
+.scorer-goals { font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 700; color: var(--teal2); }
 .scorers-list { background: var(--bg2); border: 1px solid var(--border2); border-radius: var(--r); overflow: hidden; }
 
-/* ===== UPCOMING ===== */
-.upcoming-card {
-  background: linear-gradient(135deg, rgba(27,143,168,0.08), rgba(14,20,28,0.8));
-  border: 1px solid var(--border);
-  border-radius: var(--r); padding: 16px;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-}
-.upcoming-teams { display: flex; align-items: center; gap: 10px; flex: 1; justify-content: center; }
-.vs-badge {
-  background: var(--teal-dark); color: white;
-  border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 700;
-}
-.upcoming-info { text-align: center; }
-.upcoming-date { font-size: 12px; color: var(--text2); }
-.upcoming-time { font-size: 16px; font-weight: 700; color: var(--gold2); font-family: 'Oswald', sans-serif; }
-
-/* ===== ADMIN ===== */
-.admin-overlay {
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
-  display: none; align-items: center; justify-content: center; padding: 1rem;
-}
+/* ===== ADMIN PANEL ===== */
+.admin-overlay, .config-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 1rem; }
 .admin-overlay.open { display: flex; }
-.login-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 20px; padding: 2.5rem 2rem; width: 100%; max-width: 380px;
-  text-align: center; animation: slideUp 0.3s ease;
-}
+.login-card, .config-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem 2rem; width: 100%; max-width: 380px; text-align: center; animation: slideUp 0.3s ease; }
 @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
-.login-card .logo-wrap { margin-bottom: 1.5rem; }
 .login-card h2 { font-family: 'Oswald', sans-serif; font-size: 22px; margin-bottom: 4px; color: var(--teal2); }
 .login-card p { font-size: 13px; color: var(--text2); margin-bottom: 2rem; }
 
-/* ===== ADMIN PANEL ===== */
-.admin-panel {
-  position: fixed; inset: 0; z-index: 150;
-  background: var(--bg); display: none; flex-direction: column;
-  overflow-y: auto;
-}
-.admin-panel.open { display: flex; }
-.admin-header {
-  background: var(--bg2); border-bottom: 1px solid var(--border);
-  padding: 0 1rem; display: flex; align-items: center; justify-content: space-between;
-  height: 60px; flex-shrink: 0; position: sticky; top: 0; z-index: 10;
-}
+.admin-panel { position: fixed; inset: 0; z-index: 150; background: var(--bg); display: none; flex-direction: column; overflow-y: auto; }
+.admin-header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; height: 60px; flex-shrink: 0; position: sticky; top: 0; z-index: 10; }
 .admin-nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
 .admin-nav::-webkit-scrollbar { display: none; }
-.admin-tab {
-  padding: 8px 14px; border-radius: 8px; font-size: 13px; font-family: 'Cairo', sans-serif;
-  color: var(--text2); border: none; background: transparent; cursor: pointer;
-  transition: all 0.2s; white-space: nowrap; font-weight: 500;
-}
-.admin-tab:hover { color: var(--teal2); background: var(--glass); }
-.admin-tab.active { color: var(--teal2); background: rgba(27,143,168,0.15); }
+.admin-tab { padding: 8px 14px; border-radius: 8px; font-size: 13px; font-family: 'Cairo', sans-serif; color: var(--text2); border: none; background: transparent; cursor: pointer; transition: all 0.2s; white-space: nowrap; font-weight: 500; }
+.admin-tab:hover, .admin-tab.active { color: var(--teal2); background: rgba(27,143,168,0.15); }
 .admin-content { flex: 1; max-width: 800px; margin: 0 auto; width: 100%; padding: 1.5rem 1rem; }
 .admin-section { display: none; }
 .admin-section.active { display: block; }
 
 /* ===== FORMS ===== */
-.form-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 1.5rem; margin-bottom: 1.5rem;
-}
+.form-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--r); padding: 1.5rem; margin-bottom: 1.5rem; }
 .form-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 1.25rem; }
 .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 14px; }
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 label { font-size: 12px; color: var(--text2); font-weight: 500; }
-input, select, textarea {
-  background: var(--bg3); border: 1px solid var(--border2);
-  border-radius: 8px; padding: 10px 12px; color: var(--text);
-  font-family: 'Cairo', sans-serif; font-size: 13px;
-  transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
-}
-input:focus, select:focus, textarea:focus {
-  outline: none; border-color: var(--teal);
-  box-shadow: 0 0 0 3px var(--teal-glow);
-}
-input::placeholder { color: var(--text3); }
-select { cursor: pointer; }
-select option { background: var(--bg3); }
+input, select { background: var(--bg3); border: 1px solid var(--border2); border-radius: 8px; padding: 10px 12px; color: var(--text); font-family: 'Cairo', sans-serif; font-size: 13px; width: 100%; }
+input:focus, select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px var(--teal-glow); }
 
-.btn {
-  padding: 10px 20px; border-radius: 8px; font-size: 13px;
-  font-family: 'Cairo', sans-serif; cursor: pointer; font-weight: 600;
-  transition: all 0.2s; border: none; display: inline-flex; align-items: center; gap: 6px;
-}
-.btn-primary {
-  background: linear-gradient(135deg, var(--teal), var(--teal2));
-  color: white; box-shadow: 0 4px 15px rgba(27,143,168,0.3);
-}
-.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(27,143,168,0.4); }
-.btn-primary:active { transform: scale(0.98); }
-.btn-full { width: 100%; justify-content: center; }
+.btn { padding: 10px 20px; border-radius: 8px; font-size: 13px; font-family: 'Cairo', sans-serif; cursor: pointer; font-weight: 600; transition: all 0.2s; border: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.btn-primary { background: linear-gradient(135deg, var(--teal), var(--teal2)); color: white; box-shadow: 0 4px 15px rgba(27,143,168,0.3); }
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-full { width: 100%; }
 .btn-danger { background: rgba(224,82,82,0.15); color: var(--red); border: 1px solid rgba(224,82,82,0.3); }
-.btn-danger:hover { background: rgba(224,82,82,0.25); }
 .btn-outline { background: transparent; color: var(--text2); border: 1px solid var(--border2); }
-.btn-outline:hover { color: var(--text); border-color: var(--border); }
 .btn-sm { padding: 7px 12px; font-size: 12px; }
-.btn-icon { width: 32px; height: 32px; padding: 0; justify-content: center; border-radius: 7px; }
 
 /* ===== TOAST ===== */
 .toast-container { position: fixed; top: 80px; left: 50%; transform: translateX(-50%); z-index: 999; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
-.toast {
-  background: var(--bg3); border: 1px solid var(--border);
-  border-radius: 10px; padding: 12px 20px; font-size: 13px; color: var(--text);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4); animation: toastIn 0.3s ease;
-  pointer-events: auto; min-width: 200px; text-align: center;
-}
+.toast { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 12px 20px; font-size: 13px; color: var(--text); box-shadow: 0 8px 30px rgba(0,0,0,0.4); animation: toastIn 0.3s ease; min-width: 200px; text-align: center; pointer-events: auto; }
 .toast.success { border-color: rgba(62,201,122,0.4); color: var(--green); }
 .toast.error { border-color: rgba(224,82,82,0.4); color: var(--red); }
 @keyframes toastIn { from { opacity:0; transform: translateY(-10px); } to { opacity:1; transform: none; } }
 
-/* ===== LOADING ===== */
 .spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--teal2); border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .loading-row { display: flex; align-items: center; gap: 8px; padding: 1rem; color: var(--text2); font-size: 13px; justify-content: center; }
 
-/* ===== CONFIG MODAL ===== */
-.config-overlay {
-  position: fixed; inset: 0; z-index: 300;
-  background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
-  display: none; align-items: center; justify-content: center; padding: 1rem;
-}
-.config-overlay.open { display: flex; }
-.config-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 20px; padding: 2rem; width: 100%; max-width: 500px;
-  animation: slideUp 0.3s ease;
-}
-.config-card h2 { font-family: 'Oswald', sans-serif; font-size: 20px; color: var(--teal2); margin-bottom: 4px; }
-.config-card p { font-size: 12px; color: var(--text2); margin-bottom: 1.5rem; line-height: 1.6; }
-.config-steps { background: var(--bg3); border-radius: 10px; padding: 1rem; margin-bottom: 1.5rem; }
-.config-steps ol { padding-right: 1.2rem; }
-.config-steps li { font-size: 12px; color: var(--text2); line-height: 2; }
-.config-steps code { background: rgba(27,143,168,0.15); color: var(--teal2); padding: 1px 5px; border-radius: 4px; font-size: 11px; }
-
-/* Data table in admin */
+.table-card { background: var(--bg2); border: 1px solid var(--border2); border-radius: var(--r); overflow: hidden; margin-bottom: 1rem; }
+.table-card-header { padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border2); }
 .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
 .data-table th { background: rgba(27,143,168,0.1); padding: 10px 12px; font-size: 11px; font-weight: 600; color: var(--teal2); text-align: right; }
 .data-table td { padding: 10px 12px; border-top: 1px solid var(--border2); vertical-align: middle; }
-.data-table tbody tr:hover { background: var(--glass2); }
-.table-card { background: var(--bg2); border: 1px solid var(--border2); border-radius: var(--r); overflow: hidden; margin-bottom: 1rem; }
-.table-card-header { padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border2); }
-.table-card-header span { font-size: 14px; font-weight: 600; color: var(--text); }
-
-/* Scorer inputs */
-.scorer-inputs { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
-.scorer-input-row { display: flex; gap: 8px; align-items: center; }
-.scorer-input-row input { flex: 1; }
-.remove-btn { background: rgba(224,82,82,0.1); border: 1px solid rgba(224,82,82,0.2); color: var(--red); width: 32px; height: 32px; border-radius: 7px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; transition: background 0.2s; }
-.remove-btn:hover { background: rgba(224,82,82,0.2); }
-
-/* Empty state */
 .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text3); }
-.empty-state .icon { font-size: 3rem; margin-bottom: 0.5rem; opacity: 0.5; }
-.empty-state p { font-size: 14px; }
 
-/* Section tabs for public */
 .filter-tabs { display: flex; gap: 6px; margin-bottom: 1.5rem; flex-wrap: wrap; }
-.filter-tab {
-  padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
-  font-family: 'Cairo', sans-serif; cursor: pointer; border: 1px solid var(--border2);
-  background: transparent; color: var(--text2); transition: all 0.2s;
-}
+.filter-tab { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; font-family: 'Cairo', sans-serif; cursor: pointer; border: 1px solid var(--border2); background: transparent; color: var(--text2); }
 .filter-tab.active { background: rgba(27,143,168,0.2); border-color: var(--teal); color: var(--teal2); }
-.filter-tab:hover { color: var(--teal2); border-color: var(--border); }
-
-/* Responsive */
-@media (max-width: 640px) {
-  .pub-nav-btn { padding: 6px 10px; font-size: 12px; }
-  .logo-text .t1 { font-size: 12px; }
-  .match-team { font-size: 12px; }
-  .score-num { font-size: 18px; }
-  .admin-tab { padding: 7px 10px; font-size: 12px; }
-  th, td { padding: 9px 8px; }
-}
-@media (max-width: 400px) {
-  .header-inner { gap: 6px; }
-  .admin-btn span { display: none; }
-}
 </style>
 </head>
 <body>
 
-<!-- CONFIG MODAL (first time) -->
-<div id="configOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:1rem;">
-  <div class="config-card" style="max-height:90vh;overflow-y:auto;">
-    <h2>⚙️ إعداد Supabase</h2>
-    <p>يحتاج النظام إلى ربطه بقاعدة بيانات Supabase. أدخل بياناتك مرة واحدة وسيتذكرها النظام.</p>
-    <div class="config-steps">
-      <p style="font-size:12px;color:var(--teal2);margin-bottom:8px;font-weight:600;">خطوات الإعداد:</p>
-      <ol>
-        <li>افتح <a href="https://supabase.com" target="_blank" style="color:var(--teal2)">supabase.com</a> وأنشئ مشروع جديد</li>
-        <li>من Settings → API انسخ <code>Project URL</code></li>
-        <li>انسخ <code>anon public</code> key</li>
-        <li>شغّل الـ SQL أدناه في SQL Editor</li>
-      </ol>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:1rem;">
-      <div class="form-group">
-        <label>Supabase Project URL</label>
-        <input type="url" id="sbUrl" placeholder="https://xxxx.supabase.co">
-      </div>
-      <div class="form-group">
-        <label>Supabase Anon Key</label>
-        <input type="text" id="sbKey" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
-      </div>
-    </div>
-    <div style="background:var(--bg3);border-radius:10px;padding:12px;margin-bottom:1rem;">
-      <p style="font-size:11px;color:var(--text2);margin-bottom:8px;">📋 SQL لإنشاء الجداول – <strong style="color:var(--teal2);cursor:pointer" onclick="copySql()">اضغط هنا لنسخه</strong></p>
-      <pre id="sqlCode" style="font-size:10px;color:var(--teal2);overflow-x:auto;white-space:pre-wrap;line-height:1.6;cursor:pointer;user-select:all" title="اضغط لنسخ" onclick="copySql()">create table teams (id uuid default gen_random_uuid() primary key, name text not null unique, abbr text, created_at timestamptz default now());
-
-create table matches (id uuid default gen_random_uuid() primary key, team1 text not null, team2 text not null, round int, match_date date, match_time time, played boolean default false, goals1 int default 0, goals2 int default 0, scorers text, created_at timestamptz default now());
-
-create table scorers (id uuid default gen_random_uuid() primary key, player_name text not null, team_name text, goals int default 0);
-
-alter table teams enable row level security;
-alter table matches enable row level security;
-alter table scorers enable row level security;
-create policy "public read teams" on teams for select using (true);
-create policy "public read matches" on matches for select using (true);
-create policy "public read scorers" on scorers for select using (true);
-create policy "auth write teams" on teams for all using (auth.role() = 'authenticated');
-create policy "auth write matches" on matches for all using (auth.role() = 'authenticated');
-create policy "auth write scorers" on scorers for all using (auth.role() = 'authenticated');</pre>
+<div id="configOverlay" class="config-overlay">
+  <div class="config-card">
+    <h2>⚙️ إعداد Google Sheets</h2>
+    <p>أدخل رابط Web App URL الخاص بـ Google Apps Script لربط النظام.</p>
+    <div class="form-group" style="text-align:right;margin-bottom:1rem;">
+      <label>Google Script URL</label>
+      <input type="url" id="gsUrl" placeholder="https://script.google.com/macros/s/...">
     </div>
     <button class="btn btn-primary btn-full" id="configSaveBtn" onclick="saveConfig()">💾 حفظ وتشغيل النظام</button>
-    <div id="configToast" style="display:none;margin-top:10px;font-size:12px;color:var(--red);text-align:center;padding:8px;background:rgba(224,82,82,0.1);border-radius:8px;"></div>
   </div>
 </div>
 
-<!-- LOGIN OVERLAY -->
-<div id="loginOverlay" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1rem;">
+<div id="loginOverlay" class="admin-overlay">
   <div class="login-card">
     <div class="login-logo" style="margin-bottom:1rem;">
       <div style="width:60px;height:60px;border-radius:14px;overflow:hidden;margin:0 auto;box-shadow:0 0 30px var(--teal-glow)">
@@ -449,24 +227,22 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
     </div>
     <h2>YFC Academies</h2>
     <p>تسجيل دخول الإدارة</p>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:1rem;">
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:1rem;text-align:right;">
       <div class="form-group">
         <label>البريد الإلكتروني</label>
-        <input type="email" id="loginEmail" placeholder="admin@yfc.com" autocomplete="email">
+        <input type="email" id="loginEmail" placeholder="admin@yfc.com">
       </div>
       <div class="form-group">
         <label>كلمة المرور</label>
-        <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
+        <input type="password" id="loginPass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
       </div>
     </div>
-    <div id="loginErr" style="display:none;color:var(--red);font-size:12px;margin-bottom:10px;text-align:center;"></div>
     <button class="btn btn-primary btn-full" id="loginBtn" onclick="doLogin()">دخول</button>
     <button class="btn btn-outline btn-sm" style="width:100%;margin-top:8px;" onclick="closeLogin()">إلغاء</button>
   </div>
 </div>
 
-<!-- ADMIN PANEL -->
-<div id="adminPanel" style="display:none;position:fixed;inset:0;z-index:150;background:var(--bg);flex-direction:column;overflow-y:auto;">
+<div id="adminPanel" class="admin-panel">
   <div class="admin-header">
     <div style="display:flex;align-items:center;gap:8px;">
       <div style="width:32px;height:32px;border-radius:8px;overflow:hidden;"><img src="" id="adminLogoImg" style="width:100%;height:100%;object-fit:cover" alt="YFC"></div>
@@ -476,78 +252,45 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
       <button class="admin-tab active" onclick="adminTab('teams',this)">⚽ الفرق</button>
       <button class="admin-tab" onclick="adminTab('matches',this)">📅 المباريات</button>
       <button class="admin-tab" onclick="adminTab('results',this)">📊 النتائج</button>
+      <button class="admin-tab" onclick="adminTab('users',this)">👥 المستخدمين</button>
     </div>
     <button class="btn btn-sm btn-danger" onclick="doLogout()">خروج</button>
   </div>
   <div class="admin-content">
 
-    <!-- TEAMS ADMIN -->
     <div class="admin-section active" id="admin-teams">
       <div class="form-card">
         <div class="form-title">إضافة فريق جديد</div>
         <div class="form-grid">
-          <div class="form-group">
-            <label>اسم الفريق</label>
-            <input type="text" id="teamName" placeholder="مثال: الأهلي">
-          </div>
-          <div class="form-group">
-            <label>الاختصار</label>
-            <input type="text" id="teamAbbr" placeholder="مثال: AHL" maxlength="4">
-          </div>
+          <div class="form-group"><label>اسم الفريق</label><input type="text" id="teamName" placeholder="مثال: الأهلي"></div>
+          <div class="form-group"><label>الاختصار</label><input type="text" id="teamAbbr" placeholder="مثال: AHL" maxlength="4"></div>
         </div>
-        <div style="margin-top:12px">
-          <button class="btn btn-primary" onclick="addTeam()">+ إضافة الفريق</button>
-        </div>
+        <div style="margin-top:12px"><button class="btn btn-primary" onclick="addTeam()" id="addTeamBtn">+ إضافة الفريق</button></div>
       </div>
       <div class="table-card">
-        <div class="table-card-header">
-          <span>الفرق المسجلة</span>
-          <button class="btn btn-sm btn-outline" onclick="loadAdminTeams()">🔄 تحديث</button>
-        </div>
+        <div class="table-card-header"><span>الفرق المسجلة</span></div>
         <div id="teamsAdminList"><div class="loading-row"><div class="spinner"></div> جاري التحميل...</div></div>
       </div>
     </div>
 
-    <!-- MATCHES ADMIN -->
     <div class="admin-section" id="admin-matches">
       <div class="form-card">
         <div class="form-title">إضافة مباراة جديدة</div>
         <div class="form-grid">
-          <div class="form-group">
-            <label>الفريق الأول</label>
-            <select id="mTeam1"><option value="">اختر فريق...</option></select>
-          </div>
-          <div class="form-group">
-            <label>الفريق الثاني</label>
-            <select id="mTeam2"><option value="">اختر فريق...</option></select>
-          </div>
-          <div class="form-group">
-            <label>الجولة</label>
-            <input type="number" id="mRound" placeholder="رقم الجولة" min="1">
-          </div>
-          <div class="form-group">
-            <label>التاريخ</label>
-            <input type="date" id="mDate">
-          </div>
-          <div class="form-group">
-            <label>وقت المباراة</label>
-            <input type="time" id="mTime">
-          </div>
+          <div class="form-group"><label>الفريق الأول</label><select id="mTeam1"><option value="">اختر فريق...</option></select></div>
+          <div class="form-group"><label>الفريق الثاني</label><select id="mTeam2"><option value="">اختر فريق...</option></select></div>
+          <div class="form-group"><label>الجولة</label><input type="number" id="mRound" placeholder="رقم الجولة"></div>
+          <div class="form-group"><label>التاريخ</label><input type="date" id="mDate"></div>
+          <div class="form-group"><label>الوقت</label><input type="time" id="mTime"></div>
         </div>
-        <div style="margin-top:12px">
-          <button class="btn btn-primary" onclick="addMatch()">+ إضافة المباراة</button>
-        </div>
+        <div style="margin-top:12px"><button class="btn btn-primary" onclick="addMatch()" id="addMatchBtn">+ إضافة المباراة</button></div>
       </div>
       <div class="table-card">
-        <div class="table-card-header">
-          <span>المباريات المجدولة</span>
-          <button class="btn btn-sm btn-outline" onclick="loadAdminMatches()">🔄 تحديث</button>
-        </div>
+        <div class="table-card-header"><span>المباريات المجدولة</span></div>
         <div id="matchesAdminList"><div class="loading-row"><div class="spinner"></div> جاري التحميل...</div></div>
       </div>
     </div>
 
-    <!-- RESULTS ADMIN -->
     <div class="admin-section" id="admin-results">
       <div class="form-card">
         <div class="form-title">إدخال نتيجة مباراة</div>
@@ -556,45 +299,39 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
           <select id="rMatch"><option value="">اختر مباراة...</option></select>
         </div>
         <div class="form-grid">
-          <div class="form-group">
-            <label id="rLabel1">أهداف الفريق الأول</label>
-            <input type="number" id="rGoals1" min="0" value="0" onchange="syncScorerInputs()">
-          </div>
-          <div class="form-group">
-            <label id="rLabel2">أهداف الفريق الثاني</label>
-            <input type="number" id="rGoals2" min="0" value="0" onchange="syncScorerInputs()">
-          </div>
+          <div class="form-group"><label id="rLabel1">أهداف الفريق الأول</label><input type="number" id="rGoals1" value="0"></div>
+          <div class="form-group"><label id="rLabel2">أهداف الفريق الثاني</label><input type="number" id="rGoals2" value="0"></div>
+          <div class="form-group" style="grid-column: 1 / -1;"><label>أسماء الهدافين (مفصولين بفاصلة)</label><input type="text" id="rScorers" placeholder="مثال: محمد صلاح, أحمد سيد"></div>
         </div>
-        <div style="margin-top:14px">
-          <label style="font-size:12px;color:var(--text2);font-weight:600;margin-bottom:8px;display:block">هدافو الفريق الأول</label>
-          <div id="sc1Inputs" class="scorer-inputs"></div>
-          <button class="btn btn-sm btn-outline" style="margin-top:8px" onclick="addScorerInput(1)">+ إضافة هداف</button>
-        </div>
-        <div style="margin-top:14px">
-          <label style="font-size:12px;color:var(--text2);font-weight:600;margin-bottom:8px;display:block">هدافو الفريق الثاني</label>
-          <div id="sc2Inputs" class="scorer-inputs"></div>
-          <button class="btn btn-sm btn-outline" style="margin-top:8px" onclick="addScorerInput(2)">+ إضافة هداف</button>
-        </div>
-        <div style="margin-top:16px">
-          <button class="btn btn-primary" onclick="saveResult()">💾 حفظ النتيجة</button>
-        </div>
+        <div style="margin-top:16px"><button class="btn btn-primary" onclick="saveResult()" id="saveResultBtn">💾 حفظ النتيجة</button></div>
       </div>
       <div class="table-card">
-        <div class="table-card-header">
-          <span>النتائج المدخلة</span>
-          <button class="btn btn-sm btn-outline" onclick="loadResultsAdmin()">🔄 تحديث</button>
-        </div>
+        <div class="table-card-header"><span>النتائج المدخلة</span></div>
         <div id="resultsAdminList"><div class="loading-row"><div class="spinner"></div>جاري التحميل...</div></div>
+      </div>
+    </div>
+
+    <div class="admin-section" id="admin-users">
+      <div class="form-card">
+        <div class="form-title">إضافة مستخدم جديد (Admin)</div>
+        <div class="form-grid">
+          <div class="form-group"><label>الاسم</label><input type="text" id="userName" placeholder="الاسم"></div>
+          <div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="userEmail" placeholder="admin@domain.com"></div>
+          <div class="form-group"><label>كلمة المرور</label><input type="password" id="userPass" placeholder="••••••••"></div>
+        </div>
+        <div style="margin-top:12px"><button class="btn btn-primary" onclick="addUser()" id="addUserBtn">+ إضافة المستخدم</button></div>
+      </div>
+      <div class="table-card">
+        <div class="table-card-header"><span>المستخدمين المسجلين</span></div>
+        <div id="usersAdminList"><div class="loading-row"><div class="spinner"></div> جاري التحميل...</div></div>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- TOAST CONTAINER -->
 <div class="toast-container" id="toastContainer"></div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-area">
@@ -610,17 +347,13 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
       <button class="pub-nav-btn" onclick="pubPage('scorers',this)">الهدافون</button>
     </nav>
     <button class="admin-btn" onclick="openLogin()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       <span>إدارة</span>
     </button>
-    <button class="admin-btn" onclick="resetConfig()" title="إعادة إعداد Supabase" style="padding:7px 10px;">⚙️</button>
+    <button class="admin-btn" onclick="resetConfig()" title="إعادة إعداد الربط" style="padding:7px 10px;">⚙️</button>
   </div>
 </header>
 
-<!-- PUBLIC PAGES -->
 <main class="main">
-
-  <!-- HOME / STANDINGS -->
   <div class="page active" id="pub-home">
     <div class="hero">
       <div class="hero-logo"><img src="" id="heroLogoImg" alt="YFC"></div>
@@ -634,162 +367,110 @@ create policy "auth write scorers" on scorers for all using (auth.role() = 'auth
       <div class="stat-card"><div class="val" id="s-rounds">—</div><div class="lbl">جولة</div></div>
     </div>
     <div class="sec-title">ترتيب الفرق</div>
-    <div class="table-wrap" id="standingsWrap">
-      <div class="loading-row"><div class="spinner"></div> جاري تحميل الترتيب...</div>
-    </div>
-
-    <!-- Upcoming matches section -->
-    <div style="margin-top:2rem">
-      <div class="sec-title">المباريات القادمة</div>
-      <div id="upcomingList"><div class="loading-row"><div class="spinner"></div></div></div>
-    </div>
+    <div class="table-wrap" id="standingsWrap"><div class="loading-row"><div class="spinner"></div> جاري تحميل الترتيب...</div></div>
+    <div style="margin-top:2rem"><div class="sec-title">المباريات القادمة</div><div id="upcomingList"><div class="loading-row"><div class="spinner"></div></div></div></div>
   </div>
 
-  <!-- RESULTS PAGE -->
   <div class="page" id="pub-results">
     <div class="sec-title">نتائج المباريات</div>
     <div class="filter-tabs" id="roundTabs"></div>
-    <div class="results-grid" id="resultsList">
-      <div class="loading-row"><div class="spinner"></div> جاري التحميل...</div>
-    </div>
+    <div class="results-grid" id="resultsList"><div class="loading-row"><div class="spinner"></div> جاري التحميل...</div></div>
   </div>
 
-  <!-- SCORERS PAGE -->
   <div class="page" id="pub-scorers">
     <div class="sec-title">ترتيب الهدافين</div>
-    <div class="scorers-list" id="scorersList">
-      <div class="loading-row"><div class="spinner"></div> جاري التحميل...</div>
-    </div>
+    <div class="scorers-list" id="scorersList"><div class="loading-row"><div class="spinner"></div> جاري التحميل...</div></div>
   </div>
-
 </main>
 
-<!-- SUPABASE SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
-// ===== CONFIG =====
-// ✏️ ضع بيانات Supabase هنا مباشرة بعد ما تحصل عليها
-const HARDCODED_URL = ''; // مثال: https://xxxx.supabase.co
-const HARDCODED_KEY = ''; // مثال: eyJhbGci...
-
-let SB_URL = HARDCODED_URL || localStorage.getItem('yfc_sb_url') || '';
-let SB_KEY = HARDCODED_KEY || localStorage.getItem('yfc_sb_key') || '';
-let sbClient = null;
+// ===== CONFIG & STATE =====
+let SCRIPT_URL = localStorage.getItem('yfc_script_url') || '';
+let appData = { teams: [], matches: [], scorers: [], users: [] };
 let currentUser = null;
-let teamsCache = [];
-let matchesCache = [];
-let allMatches = [];
-let logoBase64 = '';
 
-// ===== LOGO =====
-// YFC logo embedded — will load from same directory on GitHub Pages
 function loadLogo() {
-  const logoUrl = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADhAOEDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAcIBAUGAQID/8QAVBAAAQMDAQQEBg0HCAgHAAAAAQACAwQFBhEHEiExCBNBURciYXGBkRQVMjZCUlVWdZOUs9EjM2JyhKHDNFSCkqOxwdMWJDVDU6Ky0jdEY5W0wvD/xAAbAQEAAgMBAQAAAAAAAAAAAAAABAUDBgcCAf/EAD0RAAEDAgIGBggDCAMAAAAAAAEAAgMEEQUhEjFBUXGRBhMUUmGBIjM1obHB0fAyNOEVI0JissLi8VNykv/aAAwDAQACEQMRAD8AuWiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/Koqaen06+oii15b7w3X1r8fbO2/KFJ9c38V9sV8LgNqy0WJ7Z235QpPrm/intnbflCk+ub+KWK+aTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/intnbflCk+ub+KWKaTd6y0WJ7Z235QpPrm/ivplwoJHBrK6mc48gJWk/3pYppDeslERfF6REREREREREREREREREX419VT0NDPW1crYaenjdLLI7kxjRqSfMAi+EgC5WmzrLrNhtldc7xOWtJ3YYWDWSZ3xWj/ABPAdpVZ852xZfkkskVJVvstAT4sFG8teR+lLwcT5t0eRc/tKy+tzTKai7VJeynBLKOAnhDEDwH6x5k9pPdoBzK2KkoGRNDni7vgub4x0gmqXmOB2iwbtZ+93NfUz3zSulme6WRx1c951cT5SV8bre4epeorFa0SSvN1vcPUm63uHqXqIi83W9w9Sbre4eperb4zjV+yWrNLYrVU10jfdmNujGfrPOjW+khfHODRcle443yODWAk7gtPut7h6k3W9w9Slqk2A5zNCJJKiyUziPzctS8uH9WMj961WQ7GM9s8Dp226G5xtGrjQS9Y4eZhDXH0ArAKuAmwcFPfg9cxukYjbgo63W9w9Sbre4epfcjHxSOikY5j2OLXNcNC0jmCOwr5UhVuYXm63uHqTdb3D1L1ERebre4epN1vcPUvURF5ut7h6k3W/FHqXqIi6LFs2yrGZWOs97q4I2f+Xc/fhI7tx2rfSAD5VYrZHtet+YSMtN2ijt16I8RrT+Rqe/cJ4h36J14cieOlU19wySQysmhkfHJG4OY9jiHNcDqCCORB7VEqKOOYZix3q3w3GqmheLG7doPy3K/SLg9iGanNMOZNWPabpREQVumg3zp4smg5bw9GodpwC7xa1JGY3FrtYXUaedlRE2WPUc0REXhZkREREREREUZ9Ja7Ptmy6ogjcWvuFTHSajuOr3D0tYR6VJihzpae8K1/SzPuZVJpADO0Heq3GHllDKW7iqyoiLalyNERERERERd1scwCozrIH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";
+  const logoUrl = "data:image/png;base64,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ttM0vWiOubMHyx7sL3HT8mDxALfddpU/qs+xPAcxsu0+0XO62CqpKODrutleW6N3oJGjke8gelWYVXXiMSDqzcW333raujz6h9M41DbHSOzRysNgARERQVeoiIiIiIiIoc6WnvDtf0qz7mVTGot6UFtfXbMDUxgn2BWxVDtPinej/iA+hSaM2nbfeqzGWl1BKBuKqoiItqXJERERERERFP/AEQOWUfsn8ZT8q1dGnJrFi9Bk9bfblBRRO9i7gedXyEddqGtHjOPEcgVl57t+rKpklHh9EaKM8PZtU0Ol87GcWt87t7zBUNVSyzVLtEZZZ+QXQsKxWlocMj612eeQ1/iOz6r9elpf6aea1YzBK18sBdVVTQderJG7GD5SC86dxae1TNs9yCnyfDrbeYJGudNA0TtB16uUDR7T5na+caHtVJquoqKuqlqqueWoqJXF8ksry573HmSTxJW+wXNshwyudU2SrDY5COuppRvwzafGbqOPlBB8qlS4fpQNY05hVFJ0j0K588jfRfYZbLav1V2lR7aD7/8j+lqv756sTg23PGL11dLfGmxVh4b0rt6ncfJJ8H+kAB3lV0zySOXOsglie2SN90qnMe06hwMziCCOYWPDYXxSODxZSek1ZBV00b4XAi5+G0bFpURFcLS0UjbJNqt0wl7bfVtkuFjc7V1PvePASeLoieHlLTwJ7iSVHKLxJE2Vui4XCkUtVLSyCWI2IV5cTyax5TbRX2O4RVcXDfaDo+M9z2ni0+f0LcKh1nulxs9eyvtVdUUVUz3MsEhY7TuOnMHtB4FS3inSBv9E1kGQ22nuzBoDPEeol8pIALT5gGqknwt7TeM3HvW9UPSuCQBtSNE79Y+o96ssii607d8CrGA1c1wtru0VFKX/vj3lvYtq2z2Ru83KKMDTXx2vafUWqA6mmbraeSvo8So5BdsreYXaIudxnN8Xya4S0Fiura6eGLrZAyGQNa3UD3RaG66nlrrz7iuiWNzXNNnCylxyslbpMII8M0REXle0REREREREWHe7bS3iz1lqrmb9NVwuhlA4HdcNDp3HuKzEX0GxuF8c0OFjqVGszx24YrklXY7k09bTv8AEk00bKw+5kb5CPUdRzBWnVzNqOz+053amw1R9i18APsWsY3V0evwXD4TT3eohVazfA8nw+dzbxbn+xgdG1kIL4H93jacNe52h8i2SkrWTNAJs5cwxjA5aF5ewXj2Hd4H6rmERFOVCiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLMtFsuN4rW0VqoamuqXcooIy93nOnIeU8FYPY7sW9qKqC/5c2KWtjIfT0LSHshdzDnkcHOHYBwHPU8NI9RUxwNu457lY4dhdRXvDYxltOwfe5dF0eMLmxXEHVtwhMVzupbNKxw0dFGB+TYR2HiXEdhdoeSkxEWsSyGV5e7auq0tMylhbCzUEREWNSEREREREREREREXjmhzS1wBaRoQRwK9REXOV2CYXWymWpxWzPkcdXP9hsa5x8pA4rH8G+BfNO0/ZwurRZBK8fxFYDSwE3LByC5Twb4F807T9nCeDfAvmnafs4XVonXSd48187HT9wcguU8G+BfNO0/Zwng3wL5p2n7OF1aJ10nePNOx0/cHILlPBvgXzTtP2cJ4N8C+adp+zhdWiddJ3jzTsdP3ByC5Twb4F807T9nCeDfAvmnafs4XVonXSd48187HT9wcguU8G+BfNO0/Zwng3wL5p2n7OF1aJ10nePNOx0/cHILlPBvgXzTtP2cJ4N8C+adp+zhdWiddJ3jzTsdP3ByC5Twb4F807T9nC9Zs5wNjg4YlZyR8amaR6iuqROuk7x5p2Sn7g5BY1tt9BbKcU1uoaaigHKOnibG0ehoAWSiLGTdZwABYIiIi+oiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL//2Q==";
   document.querySelectorAll('#headerLogoImg,#heroLogoImg,#loginLogoImg,#adminLogoImg').forEach(el => {
     if(el.tagName==='IMG') el.src = logoUrl;
   });
 }
 
-// ===== INIT =====
-function initSupabase(url, key) {
-  try {
-    sbClient = window.supabase.createClient(url, key);
-    return true;
-  } catch(e) {
-    console.error('Supabase init error:', e);
-    return false;
-  }
-}
-
-function start() {
+function init() {
   loadLogo();
-
-  // Always show config screen if no credentials at all
-  if (!SB_URL || !SB_KEY) {
-    showConfigScreen();
-    return;
+  if (!SCRIPT_URL) {
+    document.getElementById('configOverlay').style.display = 'flex';
+  } else {
+    fetchAllData();
   }
-
-  const ok = initSupabase(SB_URL, SB_KEY);
-  if (!ok) {
-    showConfigScreen();
-    return;
-  }
-
-  loadPublicData();
-  checkSession();
 }
 
-function showConfigScreen() {
-  const el = document.getElementById('configOverlay');
-  el.style.cssText = 'display:flex !important; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.95); align-items:center; justify-content:center; padding:1rem;';
-}
-
-async function checkSession() {
-  if (!sbClient) return;
+async function apiCall(action, payload = {}) {
   try {
-    const { data: { session } } = await sbClient.auth.getSession();
-    if (session) { currentUser = session.user; }
-  } catch(e) { console.error(e); }
+    const response = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ action, ...payload })
+    });
+    const result = await response.json();
+    if (result.error) throw new Error(result.error);
+    return result.data;
+  } catch (err) {
+    toast('خطأ في الاتصال بالسيرفر', 'error');
+    throw err;
+  }
+}
+
+async function fetchAllData() {
+  try {
+    const data = await apiCall('getAllData');
+    appData = data;
+    renderAllViews();
+  } catch(e) {}
+}
+
+function renderAllViews() {
+  renderStandings();
+  renderUpcoming();
+  renderResults();
+  renderScorers();
+  
+  if (document.getElementById('adminPanel').style.display === 'flex') {
+    renderAdminTeams();
+    renderAdminMatches();
+    renderAdminUsers();
+  }
 }
 
 // ===== CONFIG =====
-async function saveConfig() {
-  const url = document.getElementById('sbUrl').value.trim();
-  const key = document.getElementById('sbKey').value.trim();
-  const err = document.getElementById('configToast');
+function saveConfig() {
+  const url = document.getElementById('gsUrl').value.trim();
+  if (!url) { toast('أدخل الرابط أولاً', 'error'); return; }
+  
   const btn = document.getElementById('configSaveBtn');
-  err.style.display='none';
-  if (!url || !key) { err.style.display='block'; err.textContent='يرجى إدخال جميع البيانات'; return; }
-  if (!url.startsWith('https://')) { err.style.display='block'; err.textContent='الـ URL يجب أن يبدأ بـ https://'; return; }
-
   btn.disabled = true;
-  btn.textContent = 'جاري الاتصال...';
-
-  const ok = initSupabase(url, key);
-  if (!ok) { err.style.display='block'; err.textContent='خطأ في البيانات، تأكد منها'; btn.disabled=false; btn.textContent='💾 حفظ وتشغيل النظام'; return; }
-
-  // Test connection
-  try {
-    const { error } = await sbClient.from('teams').select('count').limit(1);
-    if (error && error.code !== 'PGRST116') throw error;
-  } catch(e) {
-    err.style.display='block';
-    err.textContent = 'فشل الاتصال: تأكد من الـ URL والـ Key وإن الجداول اتعملت';
-    btn.disabled=false; btn.textContent='💾 حفظ وتشغيل النظام';
-    return;
-  }
-
-  localStorage.setItem('yfc_sb_url', url);
-  localStorage.setItem('yfc_sb_key', key);
-  SB_URL = url; SB_KEY = key;
-
-  document.getElementById('configOverlay').style.cssText = 'display:none !important';
-  btn.disabled=false; btn.textContent='💾 حفظ وتشغيل النظام';
-
-  loadPublicData();
-  checkSession();
-  toast('تم الإعداد بنجاح! 🎉','success');
+  btn.textContent = 'جاري التحميل...';
+  
+  localStorage.setItem('yfc_script_url', url);
+  SCRIPT_URL = url;
+  
+  fetchAllData().then(() => {
+    document.getElementById('configOverlay').style.display = 'none';
+    toast('تم الإعداد بنجاح ✓', 'success');
+  }).finally(() => {
+    btn.disabled = false;
+    btn.textContent = '💾 حفظ وتشغيل النظام';
+  });
 }
 
 function resetConfig() {
-  localStorage.removeItem('yfc_sb_url');
-  localStorage.removeItem('yfc_sb_key');
+  localStorage.removeItem('yfc_script_url');
   location.reload();
-}
-
-function copySql() {
-  const sql = document.getElementById('sqlCode').textContent;
-  navigator.clipboard.writeText(sql).then(()=>toast('تم نسخ SQL ✓','success'));
 }
 
 // ===== AUTH =====
 function openLogin() {
-  if (!sbClient) {
-    document.getElementById('configOverlay').style.display = 'flex';
-    toast('يرجى إعداد Supabase أولاً','error');
-    return;
-  }
+  if (!SCRIPT_URL) { toast('يرجى إعداد الرابط أولاً', 'error'); return; }
   document.getElementById('loginOverlay').style.display = 'flex';
 }
 function closeLogin() { document.getElementById('loginOverlay').style.display = 'none'; }
@@ -797,48 +478,37 @@ function closeLogin() { document.getElementById('loginOverlay').style.display = 
 async function doLogin() {
   const email = document.getElementById('loginEmail').value.trim();
   const pass  = document.getElementById('loginPass').value;
-  const err   = document.getElementById('loginErr');
   const btn   = document.getElementById('loginBtn');
-  err.style.display='none';
-  if (!email||!pass) { err.style.display='block'; err.textContent='يرجى إدخال البريد وكلمة المرور'; return; }
-  btn.innerHTML='<div class="spinner" style="width:16px;height:16px;border-width:2px"></div>';
-  btn.disabled=true;
+  
+  if (!email||!pass) { toast('يرجى إدخال البيانات', 'error'); return; }
+  btn.innerHTML='<div class="spinner"></div>'; btn.disabled=true;
+  
   try {
-    const { data, error } = await sbClient.auth.signInWithPassword({ email, password: pass });
-    btn.innerHTML='دخول'; btn.disabled=false;
-    if (error) { err.style.display='block'; err.textContent='خطأ: '+error.message; return; }
+    const data = await apiCall('login', { email, password: pass });
     currentUser = data.user;
     closeLogin();
-    openAdmin();
+    document.getElementById('adminPanel').style.display = 'flex';
+    renderAllViews();
+    toast('مرحباً '+currentUser.name, 'success');
   } catch(e) {
+    toast('بيانات الدخول غير صحيحة', 'error');
+  } finally {
     btn.innerHTML='دخول'; btn.disabled=false;
-    err.style.display='block'; err.textContent='خطأ في الاتصال: '+e.message;
   }
 }
 
-async function doLogout() {
-  await sbClient.auth.signOut();
+function doLogout() {
   currentUser = null;
   document.getElementById('adminPanel').style.display = 'none';
-  toast('تم تسجيل الخروج','success');
+  toast('تم تسجيل الخروج', 'success');
 }
 
-function openAdmin() {
-  document.getElementById('adminPanel').style.display = 'flex';
-  loadAdminTeams();
-  loadAdminMatches();
-  loadMatchesForSelect();
-  loadResultsAdmin();
-}
-
-// ===== PUBLIC NAV =====
+// ===== NAVIGATION =====
 function pubPage(name, btn) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.pub-nav-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('pub-'+name).classList.add('active');
   if(btn) btn.classList.add('active');
-  if(name==='results') loadPublicResults();
-  if(name==='scorers') loadPublicScorers();
 }
 
 function adminTab(name, btn) {
@@ -846,328 +516,224 @@ function adminTab(name, btn) {
   document.querySelectorAll('.admin-tab').forEach(b=>b.classList.remove('active'));
   document.getElementById('admin-'+name).classList.add('active');
   if(btn) btn.classList.add('active');
-  if(name==='matches') loadAdminMatches();
-  if(name==='results') { loadMatchesForSelect(); loadResultsAdmin(); }
 }
 
-// ===== PUBLIC DATA =====
-async function loadPublicData() {
-  await Promise.all([loadStandings(), loadUpcoming()]);
-}
-
-async function loadStandings() {
+// ===== PUBLIC VIEWS =====
+function renderStandings() {
   const wrap = document.getElementById('standingsWrap');
-  const [{ data: teams }, { data: matches }] = await Promise.all([
-    sbClient.from('teams').select('*').order('name'),
-    sbClient.from('matches').select('*')
-  ]);
-  teamsCache = teams || [];
-  allMatches = matches || [];
-
-  const played = allMatches.filter(m=>m.played);
-  const stats = {};
-  teamsCache.forEach(t=>stats[t.name]={name:t.name,abbr:t.abbr||t.name.substring(0,3),p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
+  const teams = appData.teams || [];
+  const matches = appData.matches || [];
+  const played = matches.filter(m => String(m.played) === 'true');
+  
   let totalGoals=0, maxRound=0;
-
+  const stats = {};
+  teams.forEach(t=>stats[t.name]={name:t.name,abbr:t.abbr||t.name.substring(0,3),p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0});
+  
   played.forEach(m=>{
     if(!stats[m.team1]||!stats[m.team2]) return;
-    const g1=parseInt(m.goals1)||0, g2=parseInt(m.goals2)||0;
+    const g1=Number(m.goals1)||0, g2=Number(m.goals2)||0;
     totalGoals+=g1+g2;
-    if(m.round>maxRound) maxRound=m.round;
+    if(Number(m.round)>maxRound) maxRound=Number(m.round);
+    
     stats[m.team1].p++; stats[m.team2].p++;
     stats[m.team1].gf+=g1; stats[m.team1].ga+=g2;
     stats[m.team2].gf+=g2; stats[m.team2].ga+=g1;
+    
     if(g1>g2){stats[m.team1].w++;stats[m.team1].pts+=3;stats[m.team2].l++;}
     else if(g2>g1){stats[m.team2].w++;stats[m.team2].pts+=3;stats[m.team1].l++;}
     else{stats[m.team1].d++;stats[m.team1].pts++;stats[m.team2].d++;stats[m.team2].pts++;}
   });
 
-  document.getElementById('s-teams').textContent=teamsCache.length;
+  document.getElementById('s-teams').textContent=teams.length;
   document.getElementById('s-matches').textContent=played.length;
   document.getElementById('s-goals').textContent=totalGoals;
   document.getElementById('s-rounds').textContent=maxRound||0;
 
   const sorted=Object.values(stats).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga)||b.gf-a.gf);
-
-  if(!sorted.length){ wrap.innerHTML='<div class="empty-state"><div class="icon">⚽</div><p>لا توجد فرق بعد</p></div>'; return; }
+  if(!sorted.length){ wrap.innerHTML='<div class="empty-state">لا توجد فرق بعد</div>'; return; }
 
   wrap.innerHTML=`<table>
-    <thead><tr>
-      <th>#</th><th>الفريق</th><th>لعب</th><th>ف</th><th>ت</th><th>خ</th>
-      <th>له</th><th>عليه</th><th>فارق</th><th>نقاط</th>
-    </tr></thead>
+    <thead><tr><th>#</th><th>الفريق</th><th>لعب</th><th>ف</th><th>ت</th><th>خ</th><th>له</th><th>عليه</th><th>فارق</th><th>نقاط</th></tr></thead>
     <tbody>${sorted.map((t,i)=>{
       const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':null;
-      const posClass=i<3?`pos-${i+1}`:'';
       const diff=t.gf-t.ga;
       return `<tr>
-        <td><span class="pos-badge ${posClass}">${medal||i+1}</span></td>
-        <td><div class="team-cell"><div class="team-avatar">${(t.abbr||t.name).substring(0,2).toUpperCase()}</div>${t.name}</div></td>
-        <td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td>
-        <td>${t.gf}</td><td>${t.ga}</td>
+        <td><span class="pos-badge ${i<3?`pos-${i+1}`:''}">${medal||i+1}</span></td>
+        <td><div class="team-cell"><div class="team-avatar">${t.abbr.substring(0,2)}</div>${t.name}</div></td>
+        <td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.gf}</td><td>${t.ga}</td>
         <td style="color:${diff>0?'var(--green)':diff<0?'var(--red)':'var(--text2)'}">${diff>0?'+':''}${diff}</td>
         <td><span class="pts-badge">${t.pts}</span></td>
       </tr>`;
-    }).join('')}</tbody>
-  </table>`;
+    }).join('')}</tbody></table>`;
 }
 
-async function loadUpcoming() {
-  const today = new Date().toISOString().split('T')[0];
-  const upcoming = allMatches.filter(m=>!m.played).sort((a,b)=>{
-    if(!a.match_date) return 1; if(!b.match_date) return -1;
-    return new Date(a.match_date)-new Date(b.match_date);
-  }).slice(0,6);
-
+function renderUpcoming() {
   const el = document.getElementById('upcomingList');
-  if(!upcoming.length){ el.innerHTML='<div class="empty-state" style="padding:1.5rem"><p style="color:var(--text3)">لا توجد مباريات قادمة</p></div>'; return; }
-
-  el.innerHTML=`<div style="display:grid;gap:10px">${upcoming.map(m=>`
-    <div class="upcoming-card">
-      <div class="upcoming-info" style="min-width:80px">
-        <div class="upcoming-date">${m.match_date?formatDate(m.match_date):''}</div>
-        <div class="upcoming-time">${m.match_time?m.match_time.substring(0,5):''}</div>
-        <div style="font-size:11px;color:var(--text3)">جولة ${m.round||'—'}</div>
-      </div>
-      <div class="upcoming-teams">
-        <span style="font-weight:600;font-size:14px">${m.team1}</span>
-        <div class="vs-badge">VS</div>
-        <span style="font-weight:600;font-size:14px">${m.team2}</span>
-      </div>
-      <span class="upcoming-badge">قادمة</span>
+  const matches = appData.matches || [];
+  const upcoming = matches.filter(m => String(m.played) !== 'true');
+  
+  if(!upcoming.length){ el.innerHTML='<div class="empty-state">لا توجد مباريات قادمة</div>'; return; }
+  
+  el.innerHTML=`<div style="display:grid;gap:10px">${upcoming.slice(0,6).map(m=>`
+    <div style="background:var(--bg2);padding:12px;border-radius:10px;border:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:12px;color:var(--text2)">جولة ${m.round}<br/>${m.match_date ? m.match_date.split('T')[0] : ''}</div>
+      <div style="font-weight:bold">${m.team1} <span style="color:var(--teal2)">VS</span> ${m.team2}</div>
+      <div style="color:var(--gold)">${m.match_time?m.match_time.substring(0,5):''}</div>
     </div>`).join('')}</div>`;
 }
 
-async function loadPublicResults() {
+function renderResults() {
   const el = document.getElementById('resultsList');
-  const tabsEl = document.getElementById('roundTabs');
-  const played = allMatches.filter(m=>m.played).sort((a,b)=>b.round-a.round||(b.match_date||'').localeCompare(a.match_date||''));
-  if(!played.length){ el.innerHTML='<div class="empty-state"><div class="icon">📋</div><p>لا توجد نتائج بعد</p></div>'; tabsEl.innerHTML=''; return; }
-
-  const rounds=[...new Set(played.map(m=>m.round).filter(Boolean))].sort((a,b)=>b-a);
-  let activeRound = rounds[0];
-
-  function renderByRound(round) {
-    activeRound=round;
-    tabsEl.querySelectorAll('.filter-tab').forEach(b=>b.classList.toggle('active',parseInt(b.dataset.round)===round));
-    const filtered=round?played.filter(m=>m.round===round):played;
-    el.innerHTML=filtered.map(m=>renderMatchCard(m)).join('');
-  }
-
-  tabsEl.innerHTML='<button class="filter-tab active" data-round="" onclick="renderAllResults()">الكل</button>'+
-    rounds.map(r=>`<button class="filter-tab" data-round="${r}" onclick="filterRound(${r})">${r===null?'—':'الجولة '+r}</button>`).join('');
-
-  window.renderAllResults=()=>{ tabsEl.querySelectorAll('.filter-tab').forEach((b,i)=>b.classList.toggle('active',i===0)); el.innerHTML=played.map(m=>renderMatchCard(m)).join(''); };
-  window.filterRound=(r)=>renderByRound(r);
-
-  el.innerHTML=played.map(m=>renderMatchCard(m)).join('');
-}
-
-function renderMatchCard(m) {
-  const scorers=(m.scorers||'').split(',').map(s=>s.trim()).filter(Boolean);
-  return `<div class="match-card">
-    <div class="match-meta">
-      <span class="round-badge">${m.round?'الجولة '+m.round:'—'}</span>
-      ${m.match_date?`<span>📅 ${formatDate(m.match_date)}</span>`:''}
-      ${m.match_time?`<span class="match-time-badge">🕐 ${m.match_time.substring(0,5)}</span>`:''}
-    </div>
-    <div class="match-row">
-      <div class="match-team home">${m.team1}</div>
-      <div class="score-display">
-        <span class="score-num">${m.goals1||0}</span>
-        <span class="score-sep">—</span>
-        <span class="score-num">${m.goals2||0}</span>
+  const played = (appData.matches || []).filter(m => String(m.played) === 'true').sort((a,b)=>b.round-a.round);
+  
+  if(!played.length){ el.innerHTML='<div class="empty-state">لا توجد نتائج بعد</div>'; return; }
+  
+  el.innerHTML = played.map(m => `
+    <div class="match-card">
+      <div class="match-meta"><span class="round-badge">الجولة ${m.round}</span></div>
+      <div class="match-row">
+        <div class="match-team home">${m.team1}</div>
+        <div class="score-display"><span class="score-num">${m.goals1}</span><span style="color:var(--text3)">—</span><span class="score-num">${m.goals2}</span></div>
+        <div class="match-team away">${m.team2}</div>
       </div>
-      <div class="match-team away">${m.team2}</div>
-    </div>
-    ${scorers.length?`<div class="scorers-line">${scorers.map(s=>`<span class="scorer-chip">⚽ ${s}</span>`).join('')}</div>`:''}
-  </div>`;
+      ${m.scorers ? `<div style="font-size:11px;color:var(--text2);margin-top:8px">⚽ الهدافون: ${m.scorers}</div>` : ''}
+    </div>`).join('');
 }
 
-async function loadPublicScorers() {
-  const { data } = await sbClient.from('scorers').select('*').order('goals',{ascending:false});
+function renderScorers() {
   const el = document.getElementById('scorersList');
-  if(!data||!data.length){ el.innerHTML='<div class="empty-state"><div class="icon">🏆</div><p>لا توجد بيانات هدافين</p></div>'; return; }
-  el.innerHTML=data.map((s,i)=>{
-    const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':null;
-    const posClass=i<3?`pos-${i+1}`:'';
-    return `<div class="scorer-row">
-      <div class="scorer-rank ${posClass}">${medal||i+1}</div>
-      <div class="team-avatar" style="flex-shrink:0">${s.player_name.charAt(0)}</div>
-      <div class="scorer-info">
-        <div class="scorer-name">${s.player_name}</div>
-        <div class="scorer-team">${s.team_name||'—'}</div>
-      </div>
+  const scorers = (appData.scorers || []).sort((a,b)=>Number(b.goals)-Number(a.goals));
+  
+  if(!scorers.length){ el.innerHTML='<div class="empty-state">لا توجد أهداف مسجلة</div>'; return; }
+  
+  el.innerHTML=scorers.map((s,i) => `
+    <div class="scorer-row">
+      <div class="scorer-rank">${i+1}</div>
+      <div class="scorer-info"><div class="scorer-name">${s.player_name}</div></div>
       <div class="scorer-goals">${s.goals} <span>⚽</span></div>
-    </div>`;
-  }).join('');
+    </div>`).join('');
 }
 
-// ===== ADMIN TEAMS =====
-async function loadAdminTeams() {
-  const { data } = await sbClient.from('teams').select('*').order('name');
-  teamsCache = data||[];
+// ===== ADMIN VIEWS & ACTIONS =====
+function renderAdminTeams() {
   const el = document.getElementById('teamsAdminList');
-  if(!data||!data.length){ el.innerHTML='<div class="empty-state"><p>لا توجد فرق بعد</p></div>'; return; }
-  el.innerHTML=`<div style="overflow-x:auto"><table class="data-table">
-    <thead><tr><th>الاسم</th><th>الاختصار</th><th>الإجراءات</th></tr></thead>
-    <tbody>${data.map(t=>`<tr>
-      <td>${t.name}</td><td>${t.abbr||'—'}</td>
-      <td><button class="btn btn-sm btn-danger" onclick="deleteTeam('${t.id}')">حذف</button></td>
-    </tr>`).join('')}</tbody>
-  </table></div>`;
+  const teams = appData.teams || [];
+  
+  document.getElementById('mTeam1').innerHTML = document.getElementById('mTeam2').innerHTML = 
+    '<option value="">اختر فريق...</option>' + teams.map(t=>`<option>${t.name}</option>`).join('');
+
+  if(!teams.length){ el.innerHTML='<div class="empty-state">لا توجد فرق</div>'; return; }
+  
+  el.innerHTML=`<table class="data-table"><thead><tr><th>الاسم</th><th>الاختصار</th><th></th></tr></thead><tbody>
+    ${teams.map(t=>`<tr><td>${t.name}</td><td>${t.abbr}</td><td><button class="btn btn-sm btn-danger" onclick="deleteTeam('${t.id}')">حذف</button></td></tr>`).join('')}
+  </tbody></table>`;
 }
 
 async function addTeam() {
   const name=document.getElementById('teamName').value.trim();
-  const abbr=document.getElementById('teamAbbr').value.trim().toUpperCase();
-  if(!name){ toast('يرجى إدخال اسم الفريق','error'); return; }
-  const { error } = await sbClient.from('teams').insert({ name, abbr });
-  if(error){ toast('خطأ: '+error.message,'error'); return; }
-  toast('تم إضافة الفريق ✓','success');
-  document.getElementById('teamName').value='';
-  document.getElementById('teamAbbr').value='';
-  loadAdminTeams();
-  loadStandings();
+  const abbr=document.getElementById('teamAbbr').value.trim();
+  if(!name){ toast('أدخل اسم الفريق', 'error'); return; }
+  
+  const btn = document.getElementById('addTeamBtn'); btn.disabled=true;
+  try {
+    appData = await apiCall('addTeam', { name, abbr });
+    toast('تمت الإضافة ✓', 'success');
+    document.getElementById('teamName').value=''; document.getElementById('teamAbbr').value='';
+    renderAllViews();
+  } finally { btn.disabled=false; }
 }
 
 async function deleteTeam(id) {
-  if(!confirm('هل تريد حذف هذا الفريق؟')) return;
-  const { error } = await sbClient.from('teams').delete().eq('id',id);
-  if(error){ toast('خطأ: '+error.message,'error'); return; }
-  toast('تم الحذف','success');
-  loadAdminTeams();
+  if(!confirm('حذف الفريق؟')) return;
+  appData = await apiCall('deleteTeam', { id });
+  renderAllViews();
+  toast('تم الحذف', 'success');
 }
 
-// ===== ADMIN MATCHES =====
-async function loadAdminMatches() {
-  const { data } = await sbClient.from('matches').select('*').order('created_at',{ascending:false});
-  matchesCache = data||[];
+function renderAdminMatches() {
   const el = document.getElementById('matchesAdminList');
-  if(!data||!data.length){ el.innerHTML='<div class="empty-state"><p>لا توجد مباريات بعد</p></div>'; return; }
+  const sel = document.getElementById('rMatch');
+  const matches = appData.matches || [];
+  
+  sel.innerHTML = '<option value="">اختر مباراة...</option>' + matches.map(m=>`<option value="${m.id}">${m.team1} vs ${m.team2} (الجولة ${m.round})</option>`).join('');
 
-  // Populate team selects
-  const opts='<option value="">اختر فريق...</option>'+(teamsCache.map(t=>`<option>${t.name}</option>`).join(''));
-  document.getElementById('mTeam1').innerHTML=opts;
-  document.getElementById('mTeam2').innerHTML=opts;
-
-  el.innerHTML=`<div style="overflow-x:auto"><table class="data-table">
-    <thead><tr><th>الفريق الأول</th><th>الفريق الثاني</th><th>الجولة</th><th>التاريخ</th><th>الوقت</th><th>الحالة</th><th></th></tr></thead>
-    <tbody>${data.map(m=>`<tr>
-      <td>${m.team1}</td><td>${m.team2}</td><td>${m.round||'—'}</td>
-      <td>${m.match_date?formatDate(m.match_date):'—'}</td>
-      <td>${m.match_time?m.match_time.substring(0,5):'—'}</td>
-      <td><span style="color:${m.played?'var(--green)':'var(--gold)'};font-size:12px">${m.played?'✓ انتهت':'⏳ قادمة'}</span></td>
-      <td><button class="btn btn-sm btn-danger" onclick="deleteMatch('${m.id}')">حذف</button></td>
-    </tr>`).join('')}</tbody>
-  </table></div>`;
+  if(!matches.length){ el.innerHTML='<div class="empty-state">لا توجد مباريات</div>'; return; }
+  el.innerHTML=`<table class="data-table"><thead><tr><th>المباراة</th><th>الجولة</th><th>النتيجة</th><th></th></tr></thead><tbody>
+    ${matches.map(m=>`<tr><td>${m.team1} vs ${m.team2}</td><td>${m.round}</td><td>${m.played==='true'?m.goals1+'-'+m.goals2:'قادمة'}</td><td><button class="btn btn-sm btn-danger" onclick="deleteMatch('${m.id}')">حذف</button></td></tr>`).join('')}
+  </tbody></table>`;
 }
 
 async function addMatch() {
-  const t1=document.getElementById('mTeam1').value;
-  const t2=document.getElementById('mTeam2').value;
-  const round=document.getElementById('mRound').value;
-  const date=document.getElementById('mDate').value||null;
-  const time=document.getElementById('mTime').value||null;
-  if(!t1||!t2){ toast('يرجى اختيار الفريقين','error'); return; }
-  if(t1===t2){ toast('الفريقان يجب أن يكونا مختلفين','error'); return; }
-  const { error } = await sbClient.from('matches').insert({ team1:t1, team2:t2, round:round?parseInt(round):null, match_date:date, match_time:time, played:false });
-  if(error){ toast('خطأ: '+error.message,'error'); return; }
-  toast('تم إضافة المباراة ✓','success');
-  document.getElementById('mRound').value='';
-  document.getElementById('mDate').value='';
-  document.getElementById('mTime').value='';
-  loadAdminMatches();
-  allMatches=[];
-  loadPublicData();
+  const team1=document.getElementById('mTeam1').value, team2=document.getElementById('mTeam2').value;
+  const round=document.getElementById('mRound').value, match_date=document.getElementById('mDate').value;
+  const match_time=document.getElementById('mTime').value;
+  
+  if(!team1||!team2){ toast('اختر الفرق', 'error'); return; }
+  
+  const btn = document.getElementById('addMatchBtn'); btn.disabled=true;
+  try {
+    appData = await apiCall('addMatch', { team1, team2, round, match_date, match_time });
+    toast('تمت الإضافة ✓', 'success');
+    renderAllViews();
+  } finally { btn.disabled=false; }
 }
 
 async function deleteMatch(id) {
-  if(!confirm('هل تريد حذف هذه المباراة؟')) return;
-  await sbClient.from('matches').delete().eq('id',id);
-  toast('تم الحذف','success');
-  loadAdminMatches();
+  if(!confirm('حذف المباراة؟')) return;
+  appData = await apiCall('deleteMatch', { id });
+  renderAllViews();
 }
-
-// ===== ADMIN RESULTS =====
-async function loadMatchesForSelect() {
-  const { data } = await sbClient.from('matches').select('*').order('round');
-  const sel = document.getElementById('rMatch');
-  const all = data||[];
-  sel.innerHTML='<option value="">اختر مباراة...</option>'+all.map(m=>`<option value="${m.id}" data-t1="${m.team1}" data-t2="${m.team2}">${m.team1} vs ${m.team2} – ${m.round?'جولة '+m.round:''} ${m.match_date?formatDate(m.match_date):''}</option>`).join('');
-  sel.onchange=()=>{
-    const opt=sel.options[sel.selectedIndex];
-    if(opt.dataset.t1){ document.getElementById('rLabel1').textContent='أهداف '+opt.dataset.t1; document.getElementById('rLabel2').textContent='أهداف '+opt.dataset.t2; }
-  };
-  matchesCache=all;
-}
-
-function addScorerInput(team) {
-  const div=document.getElementById('sc'+team+'Inputs');
-  const row=document.createElement('div'); row.className='scorer-input-row';
-  row.innerHTML=`<input type="text" placeholder="اسم اللاعب (الفريق)" class="scorer-t${team}"><button class="remove-btn" onclick="this.parentElement.remove()">×</button>`;
-  div.appendChild(row);
-}
-
-function syncScorerInputs() {}
 
 async function saveResult() {
-  const matchId=document.getElementById('rMatch').value;
-  const g1=parseInt(document.getElementById('rGoals1').value)||0;
-  const g2=parseInt(document.getElementById('rGoals2').value)||0;
-  if(!matchId){ toast('يرجى اختيار مباراة','error'); return; }
-
-  const sc1=[...document.querySelectorAll('.scorer-t1')].map(i=>i.value.trim()).filter(Boolean);
-  const sc2=[...document.querySelectorAll('.scorer-t2')].map(i=>i.value.trim()).filter(Boolean);
-  const allScorers=[...sc1,...sc2].join(', ');
-
-  const { error } = await sbClient.from('matches').update({ played:true, goals1:g1, goals2:g2, scorers:allScorers }).eq('id',matchId);
-  if(error){ toast('خطأ: '+error.message,'error'); return; }
-
-  // Update scorers table
-  const allScorerNames=[...sc1,...sc2];
-  const matchData = matchesCache.find(m=>m.id===matchId);
-  for(const name of allScorerNames) {
-    const teamName = sc1.includes(name)?(matchData?.team1||''):(matchData?.team2||'');
-    const { data: existing } = await sbClient.from('scorers').select('*').ilike('player_name',name).single();
-    if(existing) {
-      await sbClient.from('scorers').update({ goals: existing.goals+1 }).eq('id',existing.id);
-    } else {
-      await sbClient.from('scorers').insert({ player_name:name, team_name:teamName, goals:1 });
-    }
-  }
-
-  toast('تم حفظ النتيجة ✓','success');
-  document.getElementById('sc1Inputs').innerHTML='';
-  document.getElementById('sc2Inputs').innerHTML='';
-  document.getElementById('rGoals1').value=0;
-  document.getElementById('rGoals2').value=0;
-  loadResultsAdmin();
-  allMatches=[];
-  loadPublicData();
+  const id = document.getElementById('rMatch').value;
+  const goals1 = document.getElementById('rGoals1').value;
+  const goals2 = document.getElementById('rGoals2').value;
+  const scorers = document.getElementById('rScorers').value;
+  
+  if(!id) { toast('اختر المباراة', 'error'); return; }
+  
+  const btn = document.getElementById('saveResultBtn'); btn.disabled=true;
+  try {
+    appData = await apiCall('updateResult', { id, goals1, goals2, scorers });
+    toast('تم الحفظ ✓', 'success');
+    document.getElementById('rGoals1').value='0';
+    document.getElementById('rGoals2').value='0';
+    document.getElementById('rScorers').value='';
+    renderAllViews();
+  } finally { btn.disabled=false; }
 }
 
-async function loadResultsAdmin() {
-  const { data } = await sbClient.from('matches').select('*').eq('played',true).order('round',{ascending:false});
-  const el = document.getElementById('resultsAdminList');
-  if(!data||!data.length){ el.innerHTML='<div class="empty-state"><p>لا توجد نتائج مدخلة بعد</p></div>'; return; }
-  el.innerHTML=`<div style="overflow-x:auto"><table class="data-table">
-    <thead><tr><th>المباراة</th><th>النتيجة</th><th>الهدافون</th><th>الجولة</th></tr></thead>
-    <tbody>${data.map(m=>`<tr>
-      <td>${m.team1} vs ${m.team2}</td>
-      <td><strong style="font-family:'Oswald',sans-serif;font-size:15px">${m.goals1} - ${m.goals2}</strong></td>
-      <td style="font-size:12px;color:var(--text2)">${m.scorers||'—'}</td>
-      <td>${m.round?'جولة '+m.round:'—'}</td>
-    </tr>`).join('')}</tbody>
-  </table></div>`;
+// ===== USERS ADMIN =====
+function renderAdminUsers() {
+  const el = document.getElementById('usersAdminList');
+  const users = appData.users || [];
+  
+  if(!users.length){ el.innerHTML='<div class="empty-state">لا يوجد مستخدمين</div>'; return; }
+  el.innerHTML=`<table class="data-table"><thead><tr><th>الاسم</th><th>البريد</th><th></th></tr></thead><tbody>
+    ${users.map(u=>`<tr><td>${u.name}</td><td>${u.email}</td><td><button class="btn btn-sm btn-danger" onclick="deleteUser('${u.id}')">حذف</button></td></tr>`).join('')}
+  </tbody></table>`;
 }
 
-// ===== HELPERS =====
-function formatDate(d) {
-  if(!d) return '';
-  const [y,m,day] = d.split('-');
-  const months=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
-  return `${parseInt(day)} ${months[parseInt(m)-1]} ${y}`;
+async function addUser() {
+  const name=document.getElementById('userName').value.trim();
+  const email=document.getElementById('userEmail').value.trim();
+  const password=document.getElementById('userPass').value;
+  
+  if(!name||!email||!password){ toast('أدخل كافة البيانات', 'error'); return; }
+  
+  const btn = document.getElementById('addUserBtn'); btn.disabled=true;
+  try {
+    appData = await apiCall('addUser', { name, email, password });
+    toast('تمت إضافة المستخدم ✓', 'success');
+    document.getElementById('userName').value=''; document.getElementById('userEmail').value=''; document.getElementById('userPass').value='';
+    renderAllViews();
+  } finally { btn.disabled=false; }
+}
+
+async function deleteUser(id) {
+  if(!confirm('حذف المستخدم؟')) return;
+  appData = await apiCall('deleteUser', { id });
+  renderAllViews();
 }
 
 function toast(msg, type='success') {
@@ -1178,34 +744,8 @@ function toast(msg, type='success') {
   setTimeout(()=>t.remove(),3100);
 }
 
-function copySql() {
-  const sql = document.getElementById('sqlCode').textContent;
-  navigator.clipboard.writeText(sql).then(()=>toast('تم نسخ SQL ✓','success')).catch(()=>{
-    const ta=document.createElement('textarea');
-    ta.value=sql; document.body.appendChild(ta); ta.select();
-    document.execCommand('copy'); ta.remove(); toast('تم نسخ SQL ✓','success');
-  });
-}
-
-// ===== WAIT FOR SDK THEN START =====
-function waitForSDK(attempt) {
-  attempt = attempt || 0;
-  if (window.supabase && window.supabase.createClient) {
-    start();
-  } else if (attempt < 50) {
-    setTimeout(function(){ waitForSDK(attempt+1); }, 200);
-  } else {
-    // SDK failed to load
-    document.body.innerHTML = '<div style="color:white;text-align:center;padding:2rem;font-family:Cairo,sans-serif;direction:rtl"><h2>خطأ في تحميل المكتبة</h2><p>يرجى التحقق من اتصال الإنترنت وإعادة تحميل الصفحة</p><button onclick="location.reload()" style="margin-top:1rem;padding:10px 20px;background:#1B8FA8;color:white;border:none;border-radius:8px;cursor:pointer;font-size:16px">إعادة تحميل</button></div>';
-  }
-}
-
-// Try both events for maximum compatibility
-if (document.readyState === 'complete') {
-  waitForSDK(0);
-} else {
-  window.addEventListener('load', function(){ waitForSDK(0); });
-}
+// Start
+window.addEventListener('load', init);
 </script>
 </body>
 </html>
